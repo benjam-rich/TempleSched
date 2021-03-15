@@ -23,6 +23,21 @@ namespace TempleSched.Controllers
             return View();
         }
 
+        public IActionResult Times()
+        {
+            return View();
+        }
+
+        public IActionResult TimeForm()
+        {
+            return View();
+        }
+
+        public IActionResult ViewAppointment()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
