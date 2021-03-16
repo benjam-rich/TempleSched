@@ -27,10 +27,24 @@ namespace TempleSched.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult TimeForm()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult TimeForm(Group g)
+        {
+            if (ModelState.IsValid)
+                {
+                //Update database
+                    return View();
+                }
+            else
+            {
+                return View();
+            }
+            
         }
 
         public IActionResult ViewAppointment()

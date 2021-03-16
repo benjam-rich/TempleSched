@@ -1,7 +1,22 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<h1>Enter Your Appointment Info in the form HERE</h1>
+﻿@model Group
 
+
+<form method="post" asp-action="UserInput">
+    <label asp-for="TimeChosen">Time</label>
+    <input value="TimeModel.TimeChosen" asp-for="TimeChosen" readonly /><br />
+
+    <label asp-for="Name">Group Name</label>
+    <input asp-for="Name" type="text" /><br />
+
+    <label asp-for="Size">Group Size</label>
+    <input asp-for="Size" type="number" /><br />
+
+    <label asp-for="Email">Email Address</label>
+    <input asp-for="Email" type="email" /><br />
+
+    <label asp-for="PhoneNumber">Phone Number (Optional)</label>
+    <input asp-for="PhoneNumber" type="tel" /><br /><br />
+
+    <div asp-validation-summary="All"></div>
+    <button type="submit">Submit</button>
+</form>
