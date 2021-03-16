@@ -1,19 +1,9 @@
-﻿@model AppointmentViewModel
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
 
 <div class="text-center">
-    <h3>View your appointment</h3>
+    <h3>Display all appointments from the database here</h3>
 </div>
-
-<div><h4>GroupId</h4></div><div><h4>Name</h4></div><div><h4>Size</h4></div><div><h4>Email</h4></div><div><h4>Phone #</h4></div><div><h4>Time</h4></div>
-
-<ul>
-    @foreach (var x in Model.groups)
-    {
-        <li>@x.GroupId</li>
-        <li>@x.Name</li>
-        <li>@x.Size</li>
-        <li>@x.Email</li>
-        <li>@x.PhoneNumber</li>
-        <li>@x.TimeChosen</li>
-    }
-</ul>
