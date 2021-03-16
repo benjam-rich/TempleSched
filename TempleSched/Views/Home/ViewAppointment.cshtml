@@ -1,16 +1,19 @@
-﻿@model IEnumerable<Group>
+﻿@model AppointmentsViewModel
 
 <div class="text-center">
     <h3>View your appointment</h3>
 </div>
 
+<div><h4>GroupId</h4></div><div><h4>Name</h4></div><div><h4>Size</h4></div><div><h4>Email</h4></div><div><h4>Phone #</h4></div><div><h4>Time</h4></div>
+
 <ul>
-    @foreach (var x in Model)
+    @foreach (var x in Model.groups)
     {
         <li>@x.GroupId</li>
         <li>@x.Name</li>
         <li>@x.Size</li>
         <li>@x.Email</li>
         <li>@x.PhoneNumber</li>
+        <li>@x.TimeChosen</li>
     }
 </ul>

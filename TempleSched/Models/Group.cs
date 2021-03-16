@@ -20,6 +20,6 @@ namespace TempleSched.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         [Required]
-        public TimeModel TimeChosen { get; set; }
+        public string TimeChosen { get; set; }
     }
 }

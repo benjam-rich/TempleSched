@@ -35,12 +35,11 @@ namespace TempleSched.Migrations
                     b.Property<int>("Size")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TimeChosenId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("TimeChosen")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("GroupId");
-
-                    b.HasIndex("TimeChosenId");
 
                     b.ToTable("Groups");
                 });
@@ -58,15 +57,6 @@ namespace TempleSched.Migrations
                     b.HasKey("TimeChosenId");
 
                     b.ToTable("TimeModels");
-                });
-
-            modelBuilder.Entity("TempleSched.Models.Group", b =>
-                {
-                    b.HasOne("TempleSched.Models.TimeModel", "TimeChosen")
-                        .WithMany()
-                        .HasForeignKey("TimeChosenId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
