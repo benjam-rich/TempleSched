@@ -6,16 +6,20 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using TempleSched.Models;
+using TempleSched.Models.ViewModels;
 
 namespace TempleSched.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private ListContext context { get; set; }
 
-        public HomeController(ILogger<HomeController> logger)
+        //Constructor
+
+        public HomeController(ListContext list)
         {
-            _logger = logger;
+
+            context = list;
         }
 
         public IActionResult Index()
@@ -35,7 +39,11 @@ namespace TempleSched.Controllers
 
         public IActionResult ViewAppointment()
         {
-            return View();
+            return View(new AppointmentViewModel
+            {
+                groups = context.Groups
+            }
+            );
         }
 
         public IActionResult Privacy()
