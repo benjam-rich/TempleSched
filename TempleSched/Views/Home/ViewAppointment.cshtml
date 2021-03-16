@@ -1,9 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<Group>
 
 <div class="text-center">
-    <h3>Display all appointments from the database here</h3>
+    <h3>View your appointment</h3>
 </div>
+
+<ul>
+    @foreach (var x in Model)
+    {
+        <li>@x.GroupId</li>
+        <li>@x.Name</li>
+        <li>@x.Size</li>
+        <li>@x.Email</li>
+        <li>@x.PhoneNumber</li>
+    }
+</ul>
