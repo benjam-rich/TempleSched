@@ -1,8 +1,85 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+    ViewData["Title"] = "Times";
 }
-<div class="text-center">
-    <h3>Display all available times here</h3> 
-</div>
+@model TimeModel
+
+
+<h2>Here are the available Times</h2>
+<button class="btn btn-primary" onclick="AssignTime(8), focus">8AM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(9), focus">9AM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(10), focus">10AM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(11), focus">11AM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(12), focus">12PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(13), focus">1PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(14), focus">2PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(15), focus">3PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(16), focus">4PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(17), focus">5PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(18), focus">6PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(19), focus">7PM</button>
+<br />
+<br />
+<button class="btn btn-primary" onclick="AssignTime(20), focus">8PM</button>
+<br />
+<br />
+<br />
+<br />
+<form asp-action="TimeForm" method="post">
+    <input asp-for="TimeChosen" id="timeSelected" type="hidden" />
+    <button type="submit">Submit Time</button>
+</form>
+<script>
+    function AssignTime(time) {
+
+        var timeWanted = 0;
+        timeWanted = time;
+        if (timeWanted > 12) {
+            timeWanted = timeWanted - 12;
+            timeWanted = timeWanted + "PM";
+            document.getElementById("timeSelected").value = timeWanted;
+
+
+        }
+
+
+        else if (timeWanted == 12) {
+            timeWanted = timeWanted + "PM";
+            document.getElementById("timeSelected").value = timeWanted;
+
+
+        }
+
+        else {
+            timeWanted = timeWanted + "AM";
+            document.getElementById("timeSelected").value = timeWanted;
+
+        }
+
+
+
+    }
+</script>
+
