@@ -12,6 +12,6 @@ namespace TempleSched.Models
         { }
 
         public DbSet<Group> Groups { get; set; }
-        public DbSet<TimeModel> TimeModels { get; set; }
+        //public DbSet<TimeModel> TimeModels { get; set; }
     }
 }
