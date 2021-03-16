@@ -27,14 +27,26 @@ namespace TempleSched.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Times()
         {
             return View();
         }
-
+        [HttpPost]
+        public IActionResult Times(Group timeM)
+        {
+            return View("TimeForm", timeM);
+        }
+        [HttpGet]
         public IActionResult TimeForm()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult TimeForm(Group timeM)
+        {
+            return View("ViewAppointment", timeM);
         }
 
         public IActionResult ViewAppointment()
