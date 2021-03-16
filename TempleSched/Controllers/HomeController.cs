@@ -46,7 +46,17 @@ namespace TempleSched.Controllers
         [HttpPost]
         public IActionResult TimeForm(Group timeM)
         {
-            return View("ViewAppointment", timeM);
+            if (ModelState.IsValid)
+            {
+                context.Groups.Add(timeM);       //DbSet is called Tasks
+                context.SaveChanges();
+            }
+            return View("ViewAppointment", new AppointmentsViewModel
+            {
+
+                groups = context.Groups.Where(x => x.Name != null)
+
+            });
         }
 
         public IActionResult ViewAppointment()

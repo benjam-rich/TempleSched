@@ -4,16 +4,43 @@
     <h3>View your appointment</h3>
 </div>
 
-<div><h4>GroupId</h4></div><div><h4>Name</h4></div><div><h4>Size</h4></div><div><h4>Email</h4></div><div><h4>Phone #</h4></div><div><h4>Time</h4></div>
 
-<ul>
-    @foreach (var x in Model.groups)
-    {
-        <li>@x.GroupId</li>
-        <li>@x.Name</li>
-        <li>@x.Size</li>
-        <li>@x.Email</li>
-        <li>@x.PhoneNumber</li>
-        <li>@x.TimeChosen</li>
-    }
-</ul>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    @foreach (var x in Model.groups) {
+        
+        <tbody>
+            <tr>
+
+
+                <td>@x.TimeChosen</td>
+                <td>@x.Name</td>
+                <td>@x.Size</td>
+                <td>@x.Email</td>
+                <td>@x.PhoneNumber</td>
+
+            </tr>
+        </tbody> 
+        
+      }
+        
+
+</table>
+
+
+
+
+
+
+
+
+
