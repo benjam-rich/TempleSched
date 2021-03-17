@@ -324,7 +324,9 @@
     <input asp-for="TimeChosen" id="timeSelected" type="hidden" />
     <button type="submit">Submit Time</button>
 </form>
-<script>
+<script>/*Received a time and day from the onclick in the above buttons. Used a switch statement to set 
+ the day based on the number based in on the id. The time was calculated by using if statements which normalized the time to an AM and PM format.
+ The time and date values where then combined into the timeWanted variable. The hidden input with the id of timeSelected was then assigned the value of timeWanted.*/
     function AssignTime(time, id) {
 
         var timeWanted = 0;
