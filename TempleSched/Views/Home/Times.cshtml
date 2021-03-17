@@ -3,61 +3,362 @@
 }
 @model Group
 
+    <h2>Select a Time then Submit </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 ">
+                <h3>Sunday</h3>
+                <button class="btn btn-primary"   onclick="AssignTime(8,1), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,1), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,1), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,1), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,1), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,1), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,1), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,1), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,1), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,1), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,1), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,1), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,1), focus">8PM</button>
+                <br />
+                <br />
+                <br />
 
-<h2>Here are the available Times</h2>
-<button class="btn btn-primary" onclick="AssignTime(8), focus">8AM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(9), focus">9AM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(10), focus">10AM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(11), focus">11AM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(12), focus">12PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(13), focus">1PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(14), focus">2PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(15), focus">3PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(16), focus">4PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(17), focus">5PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(18), focus">6PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(19), focus">7PM</button>
-<br />
-<br />
-<button class="btn btn-primary" onclick="AssignTime(20), focus">8PM</button>
-<br />
-<br />
-<br />
-<br />
+            </div>
+            <div class="col-2 ">
+                <h3>Monday</h3>
+                <button class="btn btn-primary" onclick="AssignTime(8,2), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,2), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,2), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,2), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,2), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,2), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,2), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,2), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,2), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,2), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,2), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,2), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,2), focus">8PM</button>
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="col-2 ">
+                <h3>Tuesday</h3>
+                <button class="btn btn-primary" onclick="AssignTime(8,3), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,3), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,3), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,3), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,3), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,3), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,3), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,3), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,3), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,3), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,3), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,3), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,3), focus">8PM</button>
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="col-2 ">
+                <h3>Wednesday</h3>
+                <button class="btn btn-primary" onclick="AssignTime(8,4), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,4), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,4), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,4), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,4), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,4), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,4), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,4), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,4), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,4), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,4), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,4), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,4), focus">8PM</button>
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="col-2 ">
+                <h3>Thursday</h3>
+                <button class="btn btn-primary" onclick="AssignTime(8,5), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,5), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,5), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,5), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,5), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,5), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,5), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,5), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,5), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,5), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,5), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,5), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,5), focus">8PM</button>
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="col-2 ">
+                <h3>Friday</h3>
+                <button class="btn btn-primary" onclick="AssignTime(8,6), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,6), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,6), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,6), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,6), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,6), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,6), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,6), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,6), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,6), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,6), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,6), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,6), focus">8PM</button>
+                <br />
+                <br />
+                <br />
+
+            </div>
+            <div class="col-2 ">
+                <h3>Saturday</h3>
+                <button class="btn btn-primary" onclick="AssignTime(8,7), focus">8AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(9,7), focus">9AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(10,7), focus">10AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(11,7), focus">11AM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(12,7), focus">12PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(13,7), focus">1PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(14,7), focus">2PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(15,7), focus">3PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(16,7), focus">4PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(17,7), focus">5PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(18,7), focus">6PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(19,7), focus">7PM</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="AssignTime(20,7), focus">8PM</button>
+                <br />
+                <br />
+                <br />
+
+            </div>
+        </div>
+    </div>
+
+
+
+
 <form asp-action="Times" method="post">
     <input asp-for="TimeChosen" id="timeSelected" type="hidden" />
     <button type="submit">Submit Time</button>
 </form>
 <script>
-    function AssignTime(time) {
+    function AssignTime(time, id) {
 
         var timeWanted = 0;
+        var id = id;
+        var day = "";
+
+        switch (id) {
+            case 1:
+                day = "Sunday";
+                break;
+            case 2:
+                day = "Monday";
+                break;
+            case 3:
+                day = "Tuesday";
+                break;
+            case 4:
+                day = "Wednesday";
+                break;
+            case 5:
+                day = "Thursday";
+                break;
+            case 6:
+                day = "Friday";
+                break;
+            case 7:
+                day = "Saturday";
+                break;
+        }
+
         timeWanted = time;
         if (timeWanted > 12) {
             timeWanted = timeWanted - 12;
-            timeWanted = timeWanted + "PM";
+            timeWanted = timeWanted + "PM on " + day ;
             document.getElementById("timeSelected").value = timeWanted;
 
 
@@ -65,14 +366,14 @@
 
 
         else if (timeWanted == 12) {
-            timeWanted = timeWanted + "PM";
+            timeWanted = timeWanted + "PM on " + day;
             document.getElementById("timeSelected").value = timeWanted;
 
 
         }
 
         else {
-            timeWanted = timeWanted + "AM";
+            timeWanted = timeWanted + "AM on " + day;
             document.getElementById("timeSelected").value = timeWanted;
 
         }
