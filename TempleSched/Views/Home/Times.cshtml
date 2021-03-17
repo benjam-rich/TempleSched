@@ -3,12 +3,14 @@
 }
 @model Group
 
-    <h2>Select a Time then Submit </h2>
+    <div class="text-center">
+        <h2>Select a Time then Submit </h2>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-2 ">
                 <h3>Sunday</h3>
-                <button class="btn btn-primary"   onclick="AssignTime(8,1), focus">8AM</button>
+                <button class="btn btn-primary" onclick="AssignTime(8,1), focus">8AM</button>
                 <br />
                 <br />
                 <button class="btn btn-primary" onclick="AssignTime(9,1), focus">9AM</button>
@@ -319,66 +321,95 @@
 
 
 
+    <div class="text-center">
 
-<form asp-action="Times" method="post">
-    <input asp-for="TimeChosen" id="timeSelected" type="hidden" />
-    <button type="submit">Submit Time</button>
-</form>
-<script>
-    function AssignTime(time, id) {
+        <form asp-action="Times" method="post">
+            <input asp-for="TimeChosen" id="timeSelected" type="hidden" />
+            <button type="submit" class="button button5">Submit Time</button>
+        </form>
+    </div>
+    <script>
+        function AssignTime(time, id) {
 
-        var timeWanted = 0;
-        var id = id;
-        var day = "";
+            var timeWanted = 0;
+            var id = id;
+            var day = "";
 
-        switch (id) {
-            case 1:
-                day = "Sunday";
-                break;
-            case 2:
-                day = "Monday";
-                break;
-            case 3:
-                day = "Tuesday";
-                break;
-            case 4:
-                day = "Wednesday";
-                break;
-            case 5:
-                day = "Thursday";
-                break;
-            case 6:
-                day = "Friday";
-                break;
-            case 7:
-                day = "Saturday";
-                break;
+            switch (id) {
+                case 1:
+                    day = "Sunday";
+                    break;
+                case 2:
+                    day = "Monday";
+                    break;
+                case 3:
+                    day = "Tuesday";
+                    break;
+                case 4:
+                    day = "Wednesday";
+                    break;
+                case 5:
+                    day = "Thursday";
+                    break;
+                case 6:
+                    day = "Friday";
+                    break;
+                case 7:
+                    day = "Saturday";
+                    break;
+            }
+
+            timeWanted = time;
+            if (timeWanted > 12) {
+                timeWanted = timeWanted - 12;
+                timeWanted = timeWanted + "PM on " + day;
+                document.getElementById("timeSelected").value = timeWanted;
+
+
+            }
+
+
+            else if (timeWanted == 12) {
+                timeWanted = timeWanted + "PM on " + day;
+                document.getElementById("timeSelected").value = timeWanted;
+
+
+            }
+
+            else {
+                timeWanted = timeWanted + "AM on " + day;
+                document.getElementById("timeSelected").value = timeWanted;
+
+            }
+
+
+
+        }
+    </script>
+
+    <!--Here is just some CSS to format the button-->
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
         }
 
-        timeWanted = time;
-        if (timeWanted > 12) {
-            timeWanted = timeWanted - 12;
-            timeWanted = timeWanted + "PM on " + day ;
-            document.getElementById("timeSelected").value = timeWanted;
-
-
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
         }
 
-
-        else if (timeWanted == 12) {
-            timeWanted = timeWanted + "PM on " + day;
-            document.getElementById("timeSelected").value = timeWanted;
-
-
-        }
-
-        else {
-            timeWanted = timeWanted + "AM on " + day;
-            document.getElementById("timeSelected").value = timeWanted;
-
-        }
-
-
-
-    }
-</script>
+            .button5:hover {
+                background-color: #555555;
+                color: white;
+            }
+    </style>
