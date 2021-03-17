@@ -53,10 +53,26 @@ namespace TempleSched
 
             app.UseEndpoints(endpoints =>
             {
+
+                //changes url to just say /appointments when on appointments page
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "appointmentsPage",
+                    "appointments",
+                    new { Controller = "Home", action = "ViewAppointment" });
+                //changes url to say /times when on time choosing page
+                endpoints.MapControllerRoute(
+                    "chooseTime",
+                    "times",
+                    new { Controller = "Home", action = "Times" });
+                //added this as appointments because it is also shown on the appointments page when the previous page passes to it
+                endpoints.MapControllerRoute(
+                    "chooseTime",
+                    "appointments",
+                    new { Controller = "Home", action = "TimeForm" });
+                //default endpoint
+                endpoints.MapDefaultControllerRoute();
             });
+        
         }
     }
 }
