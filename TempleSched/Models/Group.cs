@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace TempleSched.Models
-{
+{//This is the model that creates the Group table in the database
     public class Group
     {
         [Key]

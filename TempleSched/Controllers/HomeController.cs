@@ -32,11 +32,13 @@ namespace TempleSched.Controllers
         {
             return View();
         }
+        //Pass the selected time to the timeform page
         [HttpPost]
         public IActionResult Times(Group timeM)
         {
             return View("TimeForm", timeM);
         }
+        //allows the form to be filled out for a schedule
         [HttpGet]
         public IActionResult TimeForm()
         {
@@ -58,7 +60,7 @@ namespace TempleSched.Controllers
 
             });
         }
-
+        //This controller allows the groups to be passed from the database for the Appointment view
         public IActionResult ViewAppointment()
         {
             return View(new AppointmentsViewModel
